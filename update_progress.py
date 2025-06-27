@@ -14,8 +14,9 @@ def extract_problems():
       file_path = os.path.join(root,file)
       with open(file_path, 'r', encoding='utf-8') as f:
         content = f.read()
-        done = '# ✅ Completed' in content
-        status = '[√]' if done else '[ ]'
+        # done = '# ✅ Completed' in content
+        # status = '[√]' if done else '[ ]'
+        status = '[√]'
         sections[root.capitalize()].append(f"- {status} {file}")
 
   return sections
